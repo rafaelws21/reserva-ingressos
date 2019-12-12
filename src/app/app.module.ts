@@ -4,10 +4,14 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { RodapeComponent } from './layout/rodape/rodape.component';
+import { TopoComponent } from './layout/topo/topo.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RodapeComponent,
+    TopoComponent
   ],
   imports: [
     BrowserModule,
