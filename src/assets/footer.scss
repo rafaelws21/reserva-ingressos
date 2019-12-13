@@ -6,4 +6,17 @@
   position: absolute;
   right: 0;
   border-top: 1px solid $border;
+
+  .color-title {
+    color: $footer-title;
+  }
+  
+  a.link-rodape {
+    cursor: pointer;
+    color: $bodytext;
+    &:hover {
+        color: #545b62;;
+        text-decoration: underline;
+    }
+  }
 }

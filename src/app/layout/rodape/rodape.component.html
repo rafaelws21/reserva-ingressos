@@ -1,6 +1,7 @@
 <footer class="footer">
   <div class="row">
     <div class="col-md-3">
+      <h3 class="color-logo">OTECH</h3>
       <address>
         Street addresses: 445 Mount<br>
         Eden Road, Mount Eden<br>
@@ -8,10 +9,12 @@
       </address>
     </div> 
     <div class="col-md-3" *ngFor="let item of listaLinks">
-      <h1> {{ item.descricao }} </h1> 
-      <a class="link-rodape"  href="{{link.url}}" *ngFor="let link of item.links" >
-        {{ link.nome }}
-      </a>
+      <h3 class="color-title"> {{ item.descricao | uppercase }} </h3> 
+      <div *ngFor="let link of item.links">
+        <a class="link-rodape"  href="{{ link.url }}"  >
+          {{ link.nome }}
+        </a>
+      </div>
     </div>     
   </div>   
 </footer>
