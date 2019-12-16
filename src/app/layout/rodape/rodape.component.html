@@ -1,6 +1,6 @@
 <footer class="footer">
-  <div class="row">
-    <div class="col-md-3">
+  <div class="row visible-sm-inline ">
+    <div class="col-md-3 col-sm-3">
       <h3 class="color-logo">OTECH</h3>
       <address>
         Street addresses: 445 Mount<br>
@@ -8,7 +8,7 @@
         Auckland - Postcodes: 5022<br>          
       </address>
     </div> 
-    <div class="col-md-3" *ngFor="let item of listaLinks">
+    <div class="col-md-3 col-sm-3" *ngFor="let item of listaLinks">
       <h3 class="color-title"> {{ item.descricao | uppercase }} </h3> 
       <div *ngFor="let link of item.links">
         <a class="link-rodape"  href="{{ link.url }}"  >

@@ -1,3 +1,8 @@
+# erros
+
+- Acredito que em ingresso `INGRESso` seja um erro por isso será `INGRESSO`;
+- Api de cep original não funciona, nesse app a consulta de cep é por `via cep`.
+
 # Duvidas
 
 - Tem limites de acompanhantes?

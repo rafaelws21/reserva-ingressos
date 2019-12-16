@@ -1,0 +1,108 @@
+<form novalidate  [formGroup]="formGroup">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="inputNome">
+          <span  [@fadeInOut] *ngIf="hasValue('nome')">
+            Nome
+          </span>
+        </label>
+        <input 
+          type="text" 
+          class="form-control" 
+          id="inputNome" 
+          aria-describedby="nome'"
+          placeholder="Nome"
+          [ngClass]="{'is-invalid': f.nome.invalid &&  f.nome.touched}"
+          formControlName="nome">
+        <div class="invalid-feedback"  [@fadeInOut] *ngIf="f.nome.invalid &&  f.nome.touched">
+          Este campo é de preechimento obrigátorio.
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="inputNome">
+          <span [@fadeInOut] *ngIf="hasValue('ultimoNome')">
+            Último Nome
+          </span>
+        </label>
+        <input 
+          type="text" 
+          class="form-control" 
+          id="inputUltimoNome" 
+          aria-describedby="ultimoNome'"
+          placeholder="Último Nome"
+          [ngClass]="{ 'is-invalid': f.ultimoNome.invalid && f.ultimoNome.touched }"
+          formControlName="ultimoNome">
+        <div class="invalid-feedback" *ngIf="f.ultimoNome.invalid && f.ultimoNome.touched">
+          Este campo é de preechimento obrigátorio.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="inputNome">
+          <span  [@fadeInOut] *ngIf="hasValue('cpf')">CPF</span>
+        </label>
+        <input 
+          type="text" 
+          class="form-control" 
+          id="inputCpf" 
+          aria-describedby="cpf'"
+          placeholder="CPF"
+          formControlName="cpf"
+          [ngClass]="{ 'is-invalid': f.cpf.invalid && f.cpf.touched }"
+          mask="000-000-000-00">
+        <div class="invalid-feedback"  [@fadeInOut] *ngIf="f.cpf.invalid && f.cpf.touched">
+          Este campo é de preechimento obrigátorio.
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="inputDataNascimento">
+          <span  [@fadeInOut] *ngIf="hasValue('dataNascimento')">Data de Nascimento </span> 
+        </label>
+        <input 
+          type="text" 
+          class="form-control" 
+          id="inputDataNascimento" 
+          aria-describedby="dataNascimento'"
+          placeholder="Data de Nascimento"
+          [ngClass]="{'is-invalid': f.dataNascimento.invalid && f.dataNascimento.touched}"
+          mask="00/00/0000"
+          formControlName="dataNascimento">
+        <div class="invalid-feedback" *ngIf="f.dataNascimento.invalid && f.dataNascimento.touched">
+          Este campo é de preechimento obrigátorio.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="form-group">
+        <label for="inputNome">
+          E-mail
+        </label>
+        <input 
+          type="text" 
+          class="form-control" 
+          id="inputEmail" 
+          aria-describedby="email'"
+          placeholder="E-mail"
+         [ngClass]="{'is-invalid': f.email.invalid &&  f.email.touched}"
+          formControlName="email">
+        <div class="invalid-feedback" *ngIf="f.email.invalid && f.email.touched">
+          Este campo é de preechimento obrigátorio.
+        </div>
+        <div class="invalid-feedback" *ngIf="f.email.errors && f.email.touched">
+          E-mail inválido.
+        </div>
+      </div>
+    </div>
+  </div> 
+</form>
